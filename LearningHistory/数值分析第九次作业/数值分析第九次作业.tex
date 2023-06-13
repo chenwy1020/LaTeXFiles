@@ -1,0 +1,57 @@
+%!TEX program=xelatex
+\documentclass[UTF8]{ctexart}
+
+%%%%%% 导入包 %%%%%%
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{algorithm,algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath,amssymb,amsthm}
+
+
+%%%% 正文开始 %%%%
+\begin{document}
+
+\title{数值分析第九次作业}
+%
+\author{10200115 陈文宇}
+
+\date{\today}
+
+\maketitle{}
+
+1.已知$f(x)=a \cos(nx) + b \sin(nx),a^{2}+b^{2} \neq 0 $,
+  求$f(x)$的阶数不超过 $n-1$ 的最佳一致逼近三角多项式$T^{*}_{n-1}(x)$和$E^{*}_{n-1}(x)$。
+  
+  根据三角函数公式
+  \begin{align*}
+  	f(x)&= \sqrt{a^{2}+b^{2}} \, \cos(nx-\theta)\\
+  		&= \sqrt{a^{2}+b^{2}} \, \cos n(x-\dfrac{\theta}{n})\\
+  		&\leq \sqrt{a^{2}+b^{2}}
+  \end{align*}
+  其中$\theta = \arctan(\frac{b}{a}) \in (-\frac{\pi}{2},\frac{\pi}{2})$
+  
+  注意到$f(x)$在$[0,2\pi]$上有$2n+1$个交错取最大值和最小值的点，则
+  $$f(x_{k})=(-1)^{k}\sqrt{a^{2}+b^{2}}$$
+  其中
+  \[
+  \left\{
+  \begin{aligned}
+  	x_{k} = \dfrac{\theta}{n} + \dfrac{k\pi}{n},&\qquad\theta \geq 0,k=0,1,2\dots 2n-1\\
+  	x_{k} = \dfrac{\theta}{n} + \dfrac{k\pi}{n},&\qquad\theta < 0,k=1,2,3\dots 2n
+  \end{aligned}
+  \right.
+  \]
+  显然的是若$T^{*}_{n-1}(x)=0$,则$f(x)-T^{*}_{n-1}(x)$有$2n$个交错点构成的交错点组，有定理5.1知，
+  $T^{*}_{n-1}(x)=0$是其最佳一致逼近三角多项式\newpage
+
+2.$f(x) = x^{3}$,求 \,$p^{*}_{2}(x) \in P_{2}(x)$，$s.t.$\\
+\begin{center}
+   $||f(x)-p^{*}_{2}(x)||_{\infty} = \inf ||f(x)-p_{2}(x)||_{\infty} ,x\in[-1,1]$ 
+\end{center}
+解：\quad 由定理知 $$p_{2}(x)=f(x)-\dfrac{1}{4}T_{3}(x)$$
+
+将$T_{3}(x)=4x_{3}-3x$代入上式得$$p^{*}_{2}(x)=\frac{3}{4}(x)$$
+
+
+\end{document}

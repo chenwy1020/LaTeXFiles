@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}关于问题三的重述与思考}{3}{}%
+\contentsline {section}{\numberline {2}代码结果的比较}{3}{}%
+\contentsline {section}{\numberline {3}论述}{3}{}%
+\contentsline {section}{\numberline {4}利用模拟退火算法全局搜索极小值验证结果}{3}{}%
+\contentsline {section}{\numberline {5}关于全局最优解思考}{3}{}%
+\contentsline {section}{\numberline {6}结语}{3}{}%

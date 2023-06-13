@@ -1,0 +1,55 @@
+%!TEX program=xelatex
+\documentclass[UTF8]{ctexart}
+
+%%%%%% 导入包 %%%%%%
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{algorithm,algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath,amssymb,amsthm}
+
+%%%%%% 算法部分改为中文显示 %%%%%%%%%
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+
+%%%% 正文开始 %%%%
+\begin{document}
+
+\title{关于与刘小端在数值分析期末作业的代码部分雷同的分析报告}
+%
+\author{陈文宇}
+
+\date{\today}
+
+\maketitle{}
+\begin{abstract}
+	“主观交流和客观相似” 同“抄袭”之间的界限到底在何方
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{关于问题的重述与思考}
+第一问和第二问基本源于曾经的课堂问题，由于我和小端做完作业都会共享代码，所以这方面几乎一模一样就可以解释了。
+
+同时我们的作业报告完全不同，这也充分说明我们并不构成抄袭关系。
+
+关于第三问问题重述:
+对于指定基函数和积分法，确定$f(x)=e^{x^{2}+x}$的最佳平方逼近函数。
+
+思路来源于教材 第102页，定理1.1。主要是用Gauss公式来刻画Gram矩阵和右端向量，形成$Aa=b$
+即可求解。一般的我们都希望的是可以借用从前的代码，而简单地获取到想要的结果，这就使得我们通常会借鉴我们共享的代码。
+
+
+
+
+\section{代码结果的比较}
+
+\section{论述}
+  
+\section{结语}
+
+\end{document}

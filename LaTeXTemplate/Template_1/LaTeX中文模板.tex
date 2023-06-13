@@ -1,0 +1,126 @@
+%!TEX program=xelatex
+\documentclass[UTF8]{ctexart}
+
+%%%%%% 导入包 %%%%%%
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{algorithm,algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath,amssymb,amsthm}
+
+%%%%%% 算法部分改为中文显示 %%%%%%%%%
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+
+%%%% 正文开始 %%%%
+\begin{document}
+
+\title{数值分析实习II课程}
+%
+\author{翟起龙}
+
+\date{\today}
+
+\maketitle{}
+
+考虑x=(0,1),令$A=\{\frac{1}{k}\}_{k\in N^{+}}$ 显然,对于任意$\varepsilon>0$,令 $n=1+[\frac{1}{\varepsilon}]$,
+则集合$\{\frac{1}{n},\frac{2}{n}, \dots,\frac{n-1}{n}\}$为A的有限$\varepsilon -$网,
+但$x_{n}=\frac{1}{n}\rightarrow 0 \notin X$, X非列紧。
+
+
+\section{模板示例}
+
+LaTeX可以很方便地在pdf文件中输入数学公式并进行排版. 这是一个tex文件的例子.
+
+\subsection{数列极限的定义}
+
+对任意$\varepsilon>0$, 存在$\delta>0$, 使得当$|x-x_0|<\varepsilon$时, 有
+\[
+|f(x)-f(x_0)|<\varepsilon.
+\]
+
+\subsection{多行公式}
+下面是多行公式以及公式对齐的例子. 更多特殊符号以及公式环境网上均有详细的讲解和例子.
+\begin{align}
+	-\Delta u = f,  &\quad\text{in } \Omega, \label{first_eq}
+	\\
+	u = 0, \quad &\text{on } \partial\Omega. \label{second_eq}
+\end{align}
+方程组, 矩阵也可以类似地写出来.
+\[
+\left\{
+\begin{aligned}
+	a + b = c
+	\\
+	d + e = f
+\end{aligned}
+\right.
+\hspace{1cm}
+\begin{pmatrix}
+	1 & 2
+	\\
+	3 & 4
+\end{pmatrix}
+\]
+也可以很方便地实现公式引用\eqref{second_eq}.
+
+\subsection{算法环境}
+利用algorithm宏包可以写算法.
+\begin{algorithm}[h]
+	\begin{algorithmic}[1]
+		\Require 长度$a$, 宽度$b$, 高度$c$
+		\Ensure 质量$d$, 体积$e$, 密度$f$
+		\State 首先判断$b$和$e$的大小
+		\State 然后进行加法运算
+		\Function {Add}{$a$, $b$, $c$}
+		\State $d=a+1$
+		\If{$b<e$}
+		\State $f=c+2$
+		\EndIf
+		\EndFunction
+	\end{algorithmic}
+	\caption{算法示例}
+\end{algorithm}
+
+\section{绘制图片表格}
+一些LaTeX常用的功能.
+
+\subsection{插入表格}
+通常用于列出误差等数据.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		误差 &  第一次 & 第二次 \\
+		\hline
+		0.1  &  0.2   & 0.3   \\
+		\hline
+		1.5e-2 & 3.3e-10 & 1e8 \\
+		\hline
+	\end{tabular}
+\caption{表格示例}
+\end{table}
+
+\subsection{插入图片}
+通常用于画函数图像.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=5cm]{Pics/jlu.jpg}
+	\caption{吉林大学校徽}
+\end{figure}
+
+\section{设置参考文献}
+如果需要参考文献的话可以这样引用 \cite{Yan2004}, 中英文均可 \cite{Ma2022}.
+
+\begin{thebibliography}{99}
+	
+	\bibitem{Yan2004}{严子谦, 尹景学, 张然. 数学分析. 北京: 高等教育出版社, 2004, 1-372.}
+	
+	\bibitem{Ma2022}{C. Ma, Q. Zhang, W. Zheng. A Fourth-Order Unfitted Characteristic Finite Element Method. SIAM J. Numer. Anal., 2022, 60(4), 2203-2224.}
+	
+\end{thebibliography}
+
+\end{document}

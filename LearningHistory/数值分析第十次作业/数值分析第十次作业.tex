@@ -1,0 +1,59 @@
+%!TEX program=xelatex
+\documentclass[UTF8]{ctexart}
+
+%%%%%% 导入包 %%%%%%
+\usepackage{xcolor}
+\usepackage{algorithm,algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath,amssymb,amsthm}
+
+
+%%%% 正文开始 %%%%
+\begin{document}
+	
+	\title{数值分析第十次作业}
+	%
+	\author{10200115\quad 陈文宇}
+	
+	\date{\today}
+	
+	\maketitle{}
+	
+
+
+	1.已知$f(x)=\sqrt{x},\quad \rho(x) \equiv 1,\quad [a,b]=[\dfrac{1}{4},1]$,
+	求$f(x)$ 在 $[a,b]$上的一次最佳平方逼近多项式。
+	
+	设$\phi^{*} = c_{0} + c_{1}(x)$,满足关于
+	$$S(c_{0} , c_{1}) = \int^{1}_{\frac{1}{4}}(\sqrt{x} - c_{0} - c_{1}x )^{2}dx $$
+	偏导值为零
+	
+	$$\lim\limits_{n \to \infty} \sum\limits_{k=1}^{\infty} \frac{1}{k^{2}}=\frac{\pi^{2}}{6} $$
+	故只需求解下列线性方程组
+	\[1
+	\begin{pmatrix}
+		\frac{3}{4} & \frac{15}{32} 
+		\\
+		\frac{15}{32} & \frac{21}{64}
+	\end{pmatrix}
+	\begin{pmatrix}
+		c_{0}
+		\\
+		c_{1}
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		\frac{7}{12}
+		\\
+		\frac{21}{80}
+	\end{pmatrix}
+	\]
+	解得$c_{0}=\dfrac{10}{27},c_{1}=\dfrac{88}{135}$
+	则$$\phi^{*}=\dfrac{10}{27}+\dfrac{88}{135}x$$
+	
+
+
+	
+
+	
+\end{document}
